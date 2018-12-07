@@ -116,7 +116,7 @@ bot.on('message', message => {
                         message.reply(`🚽 ${args[0]} message ont été suprimer`);
                     });
 
-                    if(cmd === "utilisateur") {
+                    if (cmd === "utilisateur") {
                         var userCreateDate = message.author.createdAt.toString().split(" ");
                         var msgauthor = message.author.id;
                         
@@ -126,8 +126,8 @@ bot.on('message', message => {
                             .addField("Vos identifiant", msgauthor, true)
                             .setThumbnail(message.author.avatarURL)
                             .setTimestamp()
-                          message.reply("Tu peut verifier t'es message priver, tu vien de recevoir des Information personnel !");
-                          message.author.sendMessage(stats_embed);
+                            message.reply("tu peut verifier t'es message priver tu viens de recevoir des Statistiques Personnel")
+                            message.author.send({embed: stats_embed});
  
                     };
 }});
