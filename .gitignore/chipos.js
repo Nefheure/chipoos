@@ -116,7 +116,7 @@ bot.on('message', message => {
                         message.reply(`🚽 ${args[0]} message ont été suprimer`);
                     });
 
-                    if (cmd === "utilisateur") {
+                    if (cmd === "stats") {
                         var userCreateDate = message.author.createdAt.toString().split(" ");
                         var msgauthor = message.author.id;
                         
