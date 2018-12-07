@@ -121,14 +121,14 @@ bot.on('message', message => {
                         var msgauthor = message.author.id;
                         
                          var stats_embed = new Discord.RichEmbed()
-
-                          .setTitle("Chipos - Statistique", bot.user.avatarURL)
-                          .addField("Date de creation de votre compte", userCreateDate[1] + ' ' + userCreateDate[2] + " " + userCreateDate[3])
-                          .addField(`Vos identifiant`, msgauthor, true)
-                          .setThumbnail(message.author.avatarURL)
-                          .setTimestamp()
-                          message.reply("Tu peut verifier t'es message priver, tu vien de recevoir des Information personnel !")
+                            .setTitle("Chipos - Statistique", bot.user.avatarURL)
+                            .addField("Date de creation de votre compte", userCreateDate[1] + ' ' + userCreateDate[2] + " " + userCreateDate[3])
+                            .addField("Vos identifiant", msgauthor, true)
+                            .setThumbnail(message.author.avatarURL)
+                            .setTimestamp()
+                          message.reply("Tu peut verifier t'es message priver, tu vien de recevoir des Information personnel !");
                           message.author.send(stats_embed);
+ 
                     };
 }});
 
