@@ -127,7 +127,7 @@ bot.on('message', message => {
                             .setThumbnail(message.author.avatarURL)
                             .setTimestamp()
                           message.reply("Tu peut verifier t'es message priver, tu vien de recevoir des Information personnel !");
-                          message.author.send(stats_embed);
+                          message.author.sendEmbed(stats_embed);
  
                     };
 }});
