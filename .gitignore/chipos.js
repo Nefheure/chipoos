@@ -116,7 +116,7 @@
                             message.reply(`🚽 ${args[0]} message ont été suprimer`);
                         });
     
-                        if(cmd === "stats") {
+                        if(cmd === "stats"){
                             var userCreateDate = message.author.createdAt.toString().split(" ");
                             var msgauthor = message.author.id;
                             
@@ -127,7 +127,7 @@
                                 .setThumbnail(message.author.avatarURL)
                                 .setTimestamp()
                                 message.reply("tu peut verifier t'es message priver tu viens de recevoir des Statistiques Personnel")
-                                message.author.sendMessage({test_embed});
+                                message.author.send({embed: test_embed});
      
                         };
     }});
