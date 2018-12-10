@@ -123,7 +123,7 @@
                              var test_embed = new Discord.RichEmbed()
                                 .setTitle("Chipos - Statistique", bot.user.avatarURL)
                                 .addField("Date de creation de votre compte", userCreateDate[1] + ' ' + userCreateDate[2] + " " + userCreateDate[3])
-                                .addField("Vos identifiant", msgauthor, true)
+                                .addField(`Vos identifiant`, msgauthor, true)
                                 .setThumbnail(message.author.avatarURL)
                                 .setTimestamp()
                                 message.reply("tu peut verifier t'es message priver tu viens de recevoir des Statistiques Personnel")
