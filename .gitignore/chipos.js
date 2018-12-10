@@ -116,7 +116,7 @@
                             message.reply(`🚽 ${args[0]} message ont été suprimer`);
                         });
     
-                        if(cmd === "stats"){
+                        if(cmd === "test"){
                             var userCreateDate = message.author.createdAt.toString().split(" ");
                             var msgauthor = message.author.id;
                             
