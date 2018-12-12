@@ -103,7 +103,7 @@
     }});
     
         //Cmd-admin:
-    bot.on('message', message => {
+    bot.on('message', function(message) {
     
         let cmd = message.content.split(" ")[0];
         cmd = cmd.slice(prefix.length);
@@ -116,20 +116,13 @@
                             message.reply(`🚽 ${args[0]} message ont été suprimer`);
                         });
     
-                        if(cmd === "test"){
-                            var userCreateDate = message.author.createdAt.toString().split(" ");
-                            var msgauthor = message.author.id;
-                            
-                             var test_embed = new Discord.RichEmbed()
-                                .setTitle("Chipos - Statistique", bot.user.avatarURL)
-                                .addField("Date de creation de votre compte", userCreateDate[1] + ' ' + userCreateDate[2] + " " + userCreateDate[3])
-                                .addField(`Vos identifiant`, msgauthor, true)
-                                .setThumbnail(message.author.avatarURL)
-                                .setTimestamp()
-                                message.reply("tu peut verifier t'es message priver tu viens de recevoir des Statistiques Personnel")
-                                message.author.send({embed: test_embed});
-     
-                        };
-    }});
+                        if(cmd === "test") {
+                            bot.sendMessage(message, `Statistique bot\n\n` + 
+
+                            `Nombre de Personne:` + bot.user.length +
+                            `\nNombre de serveur:` + bot.servers.length +
+                            `\nNombre de Categorie et salon:` + bot.channels.length
+                            );
+        }}});
     
     bot.login(process.env.TOKEN);
