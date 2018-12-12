@@ -133,7 +133,7 @@
                                     .setThumbnail(message.author.avatarURL)
                                     message.reply(`tu a recu t'es Statistiques en Priver`)
                                     message.author.send({embed: stats_embed});
-
+                                  break;
                             
         }}});
     
