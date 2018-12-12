@@ -116,13 +116,25 @@
                             message.reply(`🚽 ${args[0]} message ont été suprimer`);
                         });
     
-                        if(cmd === "test") {
-                            bot.sendMessage(message, `Statistique bot\n\n` + 
+                        if(!cmd) return;
 
-                            `Nombre de Personne:` + bot.user.length +
-                            `\nNombre de serveur:` + bot.servers.length +
-                            `\nNombre de Categorie et salon:` + bot.channels.length
-                            );
+                            var args = message.content.substring(prefix.length).split(" ");
+                            switch (args[0].toLowerCase()) {
+                                case "stats":
+
+                                var userCreateDate = message.author.createdAt.toString().split(" ");
+                                var msgauthor = message.author.id;
+
+                                var stats_embed = new Discord.RichEmbed()
+                                    .setAuthor(`Voici t'es Statistiques ${message.author.username}`)
+                                    .addField(`Ton Identifiant:`, msgauthor, true)
+                                    .addField(`Voici la date a laquelle tu a crees ton compte:`, userCreateDate[1] + ' ' + userCreateDate[2] + ' ' + userCreateDate[3])
+                                    .setTimestamp()
+                                    .setThumbnail(message.author.avatarURL)
+                                    message.reply(`tu a recu t'es Statistiques en Priver`)
+                                    message.author.send({embed: stats_embed});
+
+                            
         }}});
     
     bot.login(process.env.TOKEN);
