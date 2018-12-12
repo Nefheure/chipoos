@@ -116,7 +116,7 @@
                             message.reply(`🚽 ${args[0]} message ont été suprimer`);
                         });
     
-                        if(!cmd) return;
+                        if(!cmd.startsWith(prefix)) return;
 
                             var args = message.content.substring(prefix.length).split(" ");
                             switch (args[0].toLowerCase()) {
